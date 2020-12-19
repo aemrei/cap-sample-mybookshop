@@ -2,7 +2,7 @@
   "name": "my-bookshop",
   "version": "1.0.0",
   "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "repository": "https://github.com/aemrei/cap-sample-mybookshop",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -10,9 +10,21 @@
     "express": "^4"
   },
   "devDependencies": {
-    "sqlite3": "^5"
+    "sqlite3": "^5.0.0"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "watch": "cds watch"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "model": "*",
+        "credentials": {
+          "database": "db/my-bookshop.db"
+        }
+      }
+    }
   }
 }
